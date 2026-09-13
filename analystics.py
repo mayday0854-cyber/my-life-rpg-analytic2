@@ -2,10 +2,9 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-from notion_client import Client
 import requests  
-NOTION_TOKEN = "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"
-DATABASE_ID = "3dacb4ee98008001b171e36b829303b7"
+NOTION_TOKEN = st.secrets["NOTION_TOKEN"]
+DATABASE_ID = st.secrets["DATABASE_ID"]
 
 notion = Client(auth=NOTION_TOKEN)
 
