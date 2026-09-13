@@ -6,8 +6,6 @@ import requests
 NOTION_TOKEN = st.secrets["NOTION_TOKEN"]
 DATABASE_ID = st.secrets["DATABASE_ID"]
 
-notion = Client(auth=NOTION_TOKEN)
-
 # --- 2. Notionからデータ取得する関数 ---
 @st.cache_data(ttl=60)
 def fetch_notion_data():
